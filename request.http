@@ -1,0 +1,54 @@
+###
+POST http://localhost:50000/api/v1/clients/client HTTP/1.1
+Content-Type: application/json
+
+
+{
+  "client_name": "Maria Cardona",
+  "address":[{
+    "city": "Manizales",
+    "code_zip":"170002",
+    "geo":[{
+      "lat": -4.5985,
+      "long": 0.2733
+    }]
+  }],
+  "contact":{
+    "email":"mabermudez78124@umanizales.edu.co",
+    "cellphone": "3154613294"
+  }
+}
+
+###
+GET http://localhost:50000/api/v1/clients/ HTTP/1.1
+
+###
+PUT http://localhost:50000/api/v1/clients/6236492e7364e240707244d3 HTTP/1.1
+Content-Type: application/json
+
+{
+   "client_name": "Antonia Cardona",
+      "address": [
+        {
+          "city": "chinchina",
+          "code_zip": "16001",
+          "geo": [
+            {
+              "lat": -4.5985,
+              "long": 0.2733
+            }
+          ]
+        }
+      ],
+      "contact": {
+        "email": "mabermudez78124@umanizales.edu.co",
+        "cellphone": "315461**"
+}
+}
+
+
+
+
+###
+DELETE http://localhost:50000/api/v1/clients/6236492e7364e240707244d3 HTTP/1.1
+Content-Type: application/json
